@@ -1,4 +1,3 @@
-//1:55:50 clase 17
 const API_URL = '/api/contacts'; //URL base para las solicitiudes
 
 const form = document.getElementById('contact-form');
@@ -8,7 +7,7 @@ const form = document.getElementById('contact-form');
 const contactsTable = document.getElementById('contacts-table');
 
 
-//Función para obtener los contactos desde elback
+//Función para obtener los contactos desde el back
 async function fetchContacts() {
     const res = await fetch(API_URL);
     //realiza una solicitud GET al back
@@ -35,7 +34,7 @@ function renderContacts(contacts) {
 };
 
 
-//Manejar el evento de enviar el formulario pra agregar un contacto
+//Manejar el evento de enviar el formulario para agregar un contacto
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); //evita que la página se recargue automáticamente
     const name = document.getElementById('name').value;
